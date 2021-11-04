@@ -37,33 +37,59 @@ namespace ConversorDeTemperaturas.Forms
 
         private void btnCalculos_Click(object sender, EventArgs e)
         {
-            Temperature temp = new Temperature(decimal.Parse(txtTemperatura.Text))
+            try
             {
-                Id = 0,
-                De = (TipoDeConversion)cmbDe.SelectedItem,
-                A = (TipoDeConversion)cmbA.SelectedItem,
-                Fecha = DateTime.Now.ToLocalTime(),
-                Medicion = decimal.Parse(txtTemperatura.Text),
-            };
 
-            temperatureColeccion.Add(temp);
+                if (cmbA.SelectedIndex < 0 || cmbDe.SelectedIndex < 0)
+                {
+                    throw new Exception("Por favor, seleccione la conversion que desea");
+                }
 
-            Resumen resumen = new Resumen()
+                if (txtTemperatura.Text == string.Empty)
+                {
+                    throw new Exception("Por favor, rellene el campo temperatura");
+                }
+
+                if (Decimal.TryParse(txtTemperatura.Text, out decimal p) == false)
+                {
+                    throw new Exception("Por favor, ingrese solo numeros");
+                }
+
+                Temperature temp = new Temperature(decimal.Parse(txtTemperatura.Text))
+                {
+                    Id = 0,
+                    De = (TipoDeConversion)cmbDe.SelectedItem,
+                    A = (TipoDeConversion)cmbA.SelectedItem,
+                    Fecha = DateTime.Now.ToLocalTime(),
+                    Medicion = decimal.Parse(txtTemperatura.Text),
+                };
+
+                temperatureColeccion.Add(temp);
+
+                Resumen resumen = new Resumen()
+                {
+                    Fecha = DateTime.Now.ToLocalTime(),
+                    Conversion = temp.Medicion,
+                    De = (TipoDeConversion)cmbDe.SelectedItem,
+                    A = (TipoDeConversion)cmbA.SelectedItem,
+
+                    // Cree una fabrica de objetos que funcioan con los comboxs 
+                    // Primero selecciono cual es la medicion que quiere convertir 
+
+                    Resultado = Fabrica.CreateInstance(temp.De).
+                    ConversionDeTemperatura(temp.Medicion, temp.A),
+                };
+
+                resumenServices.Add(resumen);
+
+                dataResumen.DataSource = resumenServices.FindAll().ToList();
+                dataResumen.Columns[0].Width = 200;
+                dataResumen.Columns[4].Width = 200;
+            }
+            catch (Exception ex)
             {
-                Fecha = DateTime.Now.ToLocalTime(),
-                Conversion = temp.Medicion,
-                De = (TipoDeConversion)cmbDe.SelectedItem,
-                A = (TipoDeConversion)cmbA.SelectedItem,
-                
-                Resultado = Fabrica.CreateInstance(temp.De).
-                ConversionDeTemperatura(temp.Medicion, temp.A),
-            };
-
-            resumenServices.Add(resumen);
-            
-            dataResumen.DataSource = resumenServices.FindAll().ToList();
-            dataResumen.Columns[0].Width = 200;
-            dataResumen.Columns[4].Width = 200;
+                MessageBox.Show(ex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
         }
@@ -75,26 +101,26 @@ namespace ConversorDeTemperaturas.Forms
 
         private void btnGo_Click(object sender, EventArgs e)
         {
-            dataResumen.DataSource = resumenServices.FindAll();
+            try
+            {
+
+                if (cmbDeResumen.SelectedIndex < 0 || cmbAresumen.SelectedIndex < 0)
+                {
+                    throw new Exception("Por favor, seleccione la consulta que desea");
+                }
+
+                var a = resumenServices.GetByDeA((TipoDeConversion)cmbDeResumen.SelectedItem, (TipoDeConversion)cmbAresumen.SelectedItem);
+                dataResumen.DataSource = a;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void txtTemperatura_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
 
-            if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                //el resto de teclas pulsadas se desactivan
-                e.Handled = true;
-            }
         }
     }
 }

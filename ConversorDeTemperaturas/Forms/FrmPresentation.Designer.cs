@@ -59,7 +59,7 @@ namespace ConversorDeTemperaturas.Forms
             this.dataResumen.Location = new System.Drawing.Point(20, 77);
             this.dataResumen.Name = "dataResumen";
             this.dataResumen.RowTemplate.Height = 25;
-            this.dataResumen.Size = new System.Drawing.Size(676, 335);
+            this.dataResumen.Size = new System.Drawing.Size(716, 335);
             this.dataResumen.TabIndex = 5;
             // 
             // label4
@@ -96,7 +96,7 @@ namespace ConversorDeTemperaturas.Forms
             // 
             this.btnGo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGo.Location = new System.Drawing.Point(579, 32);
+            this.btnGo.Location = new System.Drawing.Point(599, 32);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(94, 31);
             this.btnGo.TabIndex = 10;
@@ -109,9 +109,8 @@ namespace ConversorDeTemperaturas.Forms
             this.txtTemperatura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTemperatura.Location = new System.Drawing.Point(170, 65);
             this.txtTemperatura.Name = "txtTemperatura";
-            this.txtTemperatura.Size = new System.Drawing.Size(467, 23);
+            this.txtTemperatura.Size = new System.Drawing.Size(507, 23);
             this.txtTemperatura.TabIndex = 11;
-            this.txtTemperatura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTemperatura_KeyPress);
             // 
             // groupBox1
             // 
@@ -127,7 +126,7 @@ namespace ConversorDeTemperaturas.Forms
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(12, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(718, 442);
+            this.groupBox1.Size = new System.Drawing.Size(758, 442);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resumen de conversiones";
@@ -160,7 +159,7 @@ namespace ConversorDeTemperaturas.Forms
             this.cmbDe.FormattingEnabled = true;
             this.cmbDe.Location = new System.Drawing.Point(123, 31);
             this.cmbDe.Name = "cmbDe";
-            this.cmbDe.Size = new System.Drawing.Size(226, 28);
+            this.cmbDe.Size = new System.Drawing.Size(248, 28);
             this.cmbDe.TabIndex = 14;
             // 
             // cmbA
@@ -171,7 +170,7 @@ namespace ConversorDeTemperaturas.Forms
             this.cmbA.FormattingEnabled = true;
             this.cmbA.Location = new System.Drawing.Point(401, 31);
             this.cmbA.Name = "cmbA";
-            this.cmbA.Size = new System.Drawing.Size(236, 28);
+            this.cmbA.Size = new System.Drawing.Size(276, 28);
             this.cmbA.TabIndex = 15;
             // 
             // label2
@@ -209,7 +208,7 @@ namespace ConversorDeTemperaturas.Forms
             this.btnCalculos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCalculos.Location = new System.Drawing.Point(93, 94);
             this.btnCalculos.Name = "btnCalculos";
-            this.btnCalculos.Size = new System.Drawing.Size(544, 23);
+            this.btnCalculos.Size = new System.Drawing.Size(584, 23);
             this.btnCalculos.TabIndex = 19;
             this.btnCalculos.Text = "Calcular";
             this.btnCalculos.UseVisualStyleBackColor = true;
@@ -226,16 +225,16 @@ namespace ConversorDeTemperaturas.Forms
             this.groupBox2.Controls.Add(this.cmbA);
             this.groupBox2.Location = new System.Drawing.Point(16, 511);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(714, 137);
+            this.groupBox2.Size = new System.Drawing.Size(754, 137);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Data";
             // 
             // FrmPresentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 678);
+            this.ClientSize = new System.Drawing.Size(782, 678);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);

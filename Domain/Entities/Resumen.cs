@@ -10,6 +10,7 @@ namespace Domain.Entities
     public class Resumen
     {
         public DateTime Fecha { get; set; }
+
         public decimal Conversion { get; set; }
 
         public TipoDeConversion De { get; set; }
