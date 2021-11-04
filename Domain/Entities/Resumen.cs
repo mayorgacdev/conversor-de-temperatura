@@ -9,11 +9,12 @@ namespace Domain.Entities
 {
     public class Resumen
     {
+        public DateTime Fecha { get; set; }
+        public decimal Conversion { get; set; }
+
         public TipoDeConversion De { get; set; }
 
         public TipoDeConversion A { get; set; }
-
-        public DateTime Fecha { get; set; }
 
         public decimal Resultado { get; set; }
     }

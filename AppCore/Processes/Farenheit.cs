@@ -14,11 +14,11 @@ namespace AppCore.Processes
         {
             if (caso is TipoDeConversion.Celsius)
             {
-                return 1;
+                return ((temperatura - 32)/(1.8M));
             }
             else if (caso is TipoDeConversion.Kelvin)
             {
-                return 0;
+                return (((temperatura - 32) / (1.8M)) + 273.15M);
             }
             else
             {

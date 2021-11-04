@@ -111,6 +111,7 @@ namespace ConversorDeTemperaturas.Forms
             this.txtTemperatura.Name = "txtTemperatura";
             this.txtTemperatura.Size = new System.Drawing.Size(467, 23);
             this.txtTemperatura.TabIndex = 11;
+            this.txtTemperatura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTemperatura_KeyPress);
             // 
             // groupBox1
             // 

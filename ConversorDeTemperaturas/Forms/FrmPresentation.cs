@@ -41,7 +41,7 @@ namespace ConversorDeTemperaturas.Forms
             {
                 Id = 0,
                 De = (TipoDeConversion)cmbDe.SelectedItem,
-                A = (TipoDeConversion)cmbDe.SelectedItem,
+                A = (TipoDeConversion)cmbA.SelectedItem,
                 Fecha = DateTime.Now.ToLocalTime(),
                 Medicion = decimal.Parse(txtTemperatura.Text),
             };
@@ -50,13 +50,22 @@ namespace ConversorDeTemperaturas.Forms
 
             Resumen resumen = new Resumen()
             {
-                De = (TipoDeConversion)cmbDe.SelectedItem,
-                A = (TipoDeConversion)cmbDe.SelectedItem,
                 Fecha = DateTime.Now.ToLocalTime(),
-                Resultado = Fabrica.CreateInstance((TipoDeConversion)cmbDe.SelectedItem).ConversionDeTemperatura(temp.Medicion, (TipoDeConversion)cmbDe.SelectedItem),
+                Conversion = temp.Medicion,
+                De = (TipoDeConversion)cmbDe.SelectedItem,
+                A = (TipoDeConversion)cmbA.SelectedItem,
+                
+                Resultado = Fabrica.CreateInstance(temp.De).
+                ConversionDeTemperatura(temp.Medicion, temp.A),
             };
 
             resumenServices.Add(resumen);
+            
+            dataResumen.DataSource = resumenServices.FindAll().ToList();
+            dataResumen.Columns[0].Width = 200;
+            dataResumen.Columns[4].Width = 200;
+
+
         }
 
         private void CargarDataGridView()
@@ -67,6 +76,25 @@ namespace ConversorDeTemperaturas.Forms
         private void btnGo_Click(object sender, EventArgs e)
         {
             dataResumen.DataSource = resumenServices.FindAll();
+        }
+
+        private void txtTemperatura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+
+            if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan
+                e.Handled = true;
+            }
         }
     }
 }

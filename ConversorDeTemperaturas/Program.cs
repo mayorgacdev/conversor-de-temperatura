@@ -22,11 +22,11 @@ namespace ConversorDeTemperaturas
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<ServicesResumen>().As<IResumenServices>();
-            builder.RegisterType<ServicesTemperature>().As<ITemperatureColeccion>();
-
             builder.RegisterType<ResumenRepository>().As<IResumen>();
             builder.RegisterType<Temperatures>().As<ITemperature>();
+
+            builder.RegisterType<ServicesResumen>().As<IResumenServices>();
+            builder.RegisterType<ServicesTemperature>().As<ITemperatureColeccion>();
 
             var container = builder.Build(); 
             
