@@ -1,0 +1,15 @@
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\bin\Debug\net5.0\AppCore.deps.json
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\bin\Debug\net5.0\AppCore.dll
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\bin\Debug\net5.0\ref\AppCore.dll
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\bin\Debug\net5.0\AppCore.pdb
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\bin\Debug\net5.0\Domain.dll
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\bin\Debug\net5.0\Domain.pdb
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\obj\Debug\net5.0\AppCore.csproj.AssemblyReference.cache
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\obj\Debug\net5.0\AppCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\obj\Debug\net5.0\AppCore.AssemblyInfoInputs.cache
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\obj\Debug\net5.0\AppCore.AssemblyInfo.cs
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\obj\Debug\net5.0\AppCore.csproj.CoreCompileInputs.cache
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\obj\Debug\net5.0\AppCore.csproj.CopyComplete
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\obj\Debug\net5.0\AppCore.dll
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\obj\Debug\net5.0\ref\AppCore.dll
+C:\Users\Paulo Mayorga\source\repos\ConversorDeTemperaturas\AppCore\obj\Debug\net5.0\AppCore.pdb

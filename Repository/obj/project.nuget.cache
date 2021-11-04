@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vndMlU3ekUQJNTX01xEIh7DF7hnfEUIol8k8lVK1vNxDtT5JWmzcrc8hXegCpuVPdp8s1RTlOwAJvnIwh35iLw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Paulo Mayorga\\source\\repos\\ConversorDeTemperaturas\\Repository\\Repository.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Paulo Mayorga\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
+    "C:\\Users\\Paulo Mayorga\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
